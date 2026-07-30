@@ -40,7 +40,6 @@
       position: relative;
     }
 
-    /* Screen Management */
     .screen {
       display: none;
       animation: fadeIn 0.6s ease-in-out forwards;
@@ -122,7 +121,6 @@
       color: #ff758c;
     }
 
-    /* Video styling */
     .video-container {
       margin-top: 1.5rem;
       width: 100%;
@@ -145,12 +143,39 @@
       <h1>Hey Vidhi! ❤️</h1>
       <p>I crafted a tiny surprise just for you. Ready to check it out?</p>
       <div class="btn-group">
-        <button class="btn-yes" onclick="nextScreen('screen2')">Let's See! ✨</button>
+        <button class="btn-yes" onclick="nextScreen('q1')">Let's See! ✨</button>
       </div>
     </div>
 
-    <!-- Screen 2: Proposal / Question -->
-    <div class="screen" id="screen2">
+    <!-- Question 1 -->
+    <div class="screen" id="q1">
+      <h2>Question #1 💭</h2>
+      <p>Do you know who makes my day instantly better whenever they text or call?</p>
+      <div class="btn-group">
+        <button class="btn-yes" onclick="nextScreen('q2')">Is it me? 😉</button>
+      </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="screen" id="q2">
+      <h2>Question #2 🌸</h2>
+      <p>Who is officially the most special and amazing person in my life right now?</p>
+      <div class="btn-group">
+        <button class="btn-yes" onclick="nextScreen('q3')">Still Vidhi! 💖</button>
+      </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="screen" id="q3">
+      <h2>One Last Thing... 🙈</h2>
+      <p>Now that you answered those... I have one super important question left to ask you.</p>
+      <div class="btn-group">
+        <button class="btn-yes" onclick="nextScreen('proposal')">Ask Me! 💌</button>
+      </div>
+    </div>
+
+    <!-- Main Proposal Screen -->
+    <div class="screen" id="proposal">
       <h2>Will You Be My Girlfriend? 🌹</h2>
       <p>Every moment spent with you feels like magic. I'd love to turn those moments into forever.</p>
       <div class="btn-group">
@@ -159,7 +184,7 @@
       </div>
     </div>
 
-    <!-- Screen 3: Success Screen -->
+    <!-- Final Success Screen -->
     <div class="screen" id="success">
       <h2>You Made My Day! 🎉</h2>
       <div class="message-box">
@@ -185,7 +210,6 @@
       document.getElementById(screenId).classList.add('active');
     }
 
-    // Playful runaway 'No' button logic
     const noBtn = document.getElementById('noBtn');
     const card = document.getElementById('mainCard');
 
@@ -202,7 +226,6 @@
       noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
     }
 
-    // Proposal acceptance trigger (Confetti Celebration)
     function acceptProposal() {
       nextScreen('success');
 
