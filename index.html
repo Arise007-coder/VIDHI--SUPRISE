@@ -22,7 +22,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding: 20px 0;
       position: relative;
       color: #fff;
     }
@@ -181,6 +183,19 @@
       font-size: 1.8rem;
       color: #ff758c;
     }
+
+    /* Video styling */
+    .video-container {
+      margin-top: 1.5rem;
+      width: 100%;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      outline: none;
+    }
   </style>
 </head>
 <body>
@@ -260,6 +275,14 @@
         I don't know what the future holds, but I'd love to walk toward it with you.<br><br>
         Thank you for saying YES. ❤️
         <div class="signature">Forever yours,<br>Manas 🌹</div>
+      </div>
+
+      <!-- Special Video Section -->
+      <div class="video-container">
+        <video controls preload="metadata">
+          <source src="vidhi-video.mp4" type="video/mp4">
+          Your browser does not support playing this video.
+        </source></video>
       </div>
     </div>
   </div>
