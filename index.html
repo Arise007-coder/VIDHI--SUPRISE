@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VIDHI -- SUPRISE</title>
+  <title>VIDHI -- SURPRISE</title>
   
   <!-- Google Fonts & Canvas Confetti -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -105,6 +105,31 @@
       background: #e0e0e0;
       color: #666;
       position: relative;
+      transition: transform 0.2s ease-out;
+    }
+
+    /* Options grid for Q3 */
+    .options-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .btn-option {
+      background: #ffffff;
+      color: #ff4b2b;
+      border: 2px solid #ff758c;
+      border-radius: 12px;
+      padding: 12px;
+      font-weight: 600;
+      width: 100%;
+    }
+
+    .btn-option:hover {
+      background: #ff758c;
+      color: white;
+      transform: translateY(-2px);
     }
 
     .message-box {
@@ -164,9 +189,20 @@
         <button class="btn-yes" onclick="nextScreen('q3')">Still Vidhi! 💖</button>
       </div>
     </div>
-
+    
     <!-- Question 3 -->
     <div class="screen" id="q3">
+      <h2>Question #3 🥺</h2>
+      <p>What nickname do I call you when I am sad... with you?</p>
+      <div class="options-grid">
+        <button class="btn-option" onclick="nextScreen('q4')">Vidhu</button>
+        <button class="btn-option" onclick="nextScreen('q4')">Nanu</button>
+        <button class="btn-option" onclick="nextScreen('q4')">9006</button>
+      </div>
+    </div>
+    
+    <!-- Question 4 -->
+    <div class="screen" id="q4">
       <h2>One Last Thing... 🙈</h2>
       <p>Now that you answered those... I have one super important question left to ask you.</p>
       <div class="btn-group">
@@ -189,7 +225,7 @@
       <h2>You Made My Day! 🎉</h2>
       <div class="message-box">
         <p>Every moment with you has become one of my favorite memories. I don't know what the future holds, but I'd love to walk toward it together.</p>
-        <p>Thank you for saying YES. ❤️</p>
+        <p>Thank you for always being there for me. ❤️</p>
         <div class="signature">Forever yours,<br>Manas 🌹</div>
       </div>
 
